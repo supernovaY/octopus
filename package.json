@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/supernovaY/octopus/issues"
   },
-  "homepage": "https://github.com/supernovaY/octopus#readme"
+  "homepage": "https://github.com/supernovaY/octopus#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
