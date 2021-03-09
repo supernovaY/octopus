@@ -1,10 +1,12 @@
 {
-  "name": "octopus",
+  "name": "octopus-test",
   "version": "0.0.1",
-  "description": "这是一个UI框架",
+  "description": "章鱼UI-这是一个基于 Vue 的UI框架",
   "main": "index.js",
   "scripts": {
-    "test": "parcel build index.html --no-minify --no-cache; node ./test.js"
+    "start": "parcel index.html --no-cache",
+    "dev-test": "parcel watch test/* --no-cache & karma start",
+    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
   },
   "repository": {
     "type": "git",
@@ -21,14 +23,15 @@
   },
   "homepage": "https://github.com/supernovaY/octopus#readme",
   "dependencies": {
+    "run": "^1.4.0",
     "vue": "^2.6.12",
     "vue-hot-reload-api": "^2.3.0"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.0.0",
     "chai": "^4.1.2",
-    "css-loader": "^5.1.1",
     "chai-spies": "^1.0.0",
+    "css-loader": "^5.1.1",
     "karma": "^6.1.1",
     "karma-chai": "^0.1.0",
     "karma-chai-spies": "^0.1.4",
@@ -37,9 +40,9 @@
     "karma-sinon-chai": "^2.0.2",
     "mocha": "^8.3.1",
     "node-sass": "^4.9.0",
-    "parcel-bundler": "^1.9.2",
-    "puppeteer": "^1.5.0",
     "node-static": "^0.7.10",
+    "parcel-bundler": "^1.12.3",
+    "puppeteer": "^1.5.0",
     "sinon": "^9.2.4",
     "sinon-chai": "^3.5.0",
     "vue-template-compiler": "^2.5.16"

@@ -1,11 +1,11 @@
+
 <!doctype html>
 <html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>octopus-UI</title>
+    <title>章鱼-UI</title>
     <style>
         * {margin: 0; padding: 0; box-sizing: border-box;}
         html {
@@ -26,26 +26,43 @@
         }
     </style>
     <style>
+        .box{
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
-    <div id="app">
-        <g-button :loading="loading1" @click="loading1 = !loading1">按钮</g-button>
+<div id="app">
+    <div class="box">
+        <g-input v-model="message"></g-input>
+        <p>{{message}}</p>
+        <button @click="message+=1">+1</button>
+        <div>
+            <g-input value="Octopus" disabled></g-input>
+            <g-input value="Octopus2" readonly></g-input>
+            <g-input value="Octopus3"></g-input>
+        </div>
+    </div>
+    <div class="box">
+        <g-button :loading="loading1" @click="loading1 = !loading1">
+            按钮
+        </g-button>
         <g-button icon="settings" :loading="loading2"
                   @click="loading2 = !loading2">
-        按钮
+            按钮
         </g-button>
         <g-button icon="settings" icon-position="right" :loading="loading3"
                   @click="loading3 = !loading3">
+            按钮
         </g-button>
         <g-button-group>
             <g-button icon="left">上一页</g-button>
             <g-button>更多</g-button>
             <g-button icon="right" icon-position="right">下一页</g-button>
         </g-button-group>
-        <div id="test"></div>
+        <g-button icon="settings" icon="download"></g-button>
     </div>
-    <script src="./src/app.js"></script>
-    <script src="//at.alicdn.com/t/font_2405259_wrgzlv1j1y.js"></script>
+</div>
+<script src="./src/app.js"></script>
 </body>
 </html>
