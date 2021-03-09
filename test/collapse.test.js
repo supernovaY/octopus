@@ -80,6 +80,7 @@ describe('Collapse', () => {
           <g-collapse-item title="标题3" name="3"><span id="content-3">3</span></g-collapse-item>
         </g-collapse>
     `
+
     const callback = sinon.fake();
     const vm = new Vue({
       el: div,
