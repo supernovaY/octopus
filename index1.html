@@ -1,0 +1,115 @@
+
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>章鱼-UI</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        img {max-width: 100%;}
+        html {
+            --button-height: 32px;
+            --font-size: 14px;
+            --button-bg: white;
+            --button-active-bg: #eee;
+            --border-radius: 4px;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
+        }
+        #app {
+        }
+        body {
+            font-size: var(--font-size);
+        }
+    </style>
+    <style>
+        .demo {
+            border: 1px solid #666;
+            min-height: 100px;
+        }
+        .sider {
+            background: #333;
+            width: 150px;
+        }
+        .sider.slide-enter, .sider.slide-leave-to {
+            margin-left: -150px;
+        }
+        .header {
+            background: #999;
+            height: 100px;
+        }
+        .footer {
+            background: #ccc;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div style="border: 1px solid black;">
+        <g-row gutter="20">
+            <g-col span="2"
+                   :phone="{span:24}"
+                   :ipad="{span:8}"
+                   :narrow-pc="{span:4}"
+                   :pc="{span:2}"
+                   :wide-pc="{span:1}"
+            >
+                1
+            </g-col>
+            <g-col span="22"
+                   :phone="{span:24}"
+                   :ipad="{span:16}"
+                   :narrow-pc="{span:20}"
+                   :pc="{span:22}"
+                   :wide-pc="{span:23}"
+            >
+                1
+            </g-col>
+            <g-col span="22"
+                   :phone="{span:24}"
+                   :ipad="{span:16}"
+                   :narrow-pc="{span:20}"
+                   :pc="{span:22}"
+                   :wide-pc="{span:23}"
+            >11
+            </g-col>
+        </g-row>
+    </div>
+    <hr>
+    <div class="box">
+        <g-input v-model="message"></g-input>
+        <p>{{message}}</p>
+        <button @click="message+=1">+1</button>
+        <div>
+            <g-input value="Octopus" disabled></g-input>
+            <g-input value="Octopus2" readonly></g-input>
+            <g-input value="Octopus3"></g-input>
+        </div>
+    </div>
+    <div class="box">
+        <g-button :loading="loading1" @click="loading1 = !loading1">
+            按钮
+        </g-button>
+        <g-button icon="settings" :loading="loading2"
+                  @click="loading2 = !loading2">
+            按钮
+        </g-button>
+        <g-button icon="settings" icon-position="right" :loading="loading3"
+                  @click="loading3 = !loading3">
+            按钮
+        </g-button>
+        <g-button-group>
+            <g-button icon="left">上一页</g-button>
+            <g-button>更多</g-button>
+            <g-button icon="right" icon-position="right">下一页</g-button>
+        </g-button-group>
+        <g-button icon="settings" icon="download"></g-button>
+    </div>
+</div>
+<script src="./src/app.js"></script>
+</body>
+</html>
