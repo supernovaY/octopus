@@ -10,6 +10,8 @@ import Sider from './sider'
 import Content from './content'
 import Footer from './footer'
 import OctopusButtonGroup from "./button-group";
+import Toast from './toast'
+import plugin from './plugin'
 
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
@@ -22,6 +24,12 @@ Vue.component('g-header', Header)
 Vue.component('g-content', Content)
 Vue.component('g-footer', Footer)
 Vue.component('g-sider', Sider)
+Vue.component('g-toast', Toast)
+Vue.use(plugin)
+
+import createElement from 'vue'
+
+const h = createElement
 
 new Vue({
     el: '#app',
@@ -33,9 +41,29 @@ new Vue({
     },
     created(){
     },
+
     methods: {
-        inputChange (e) {
-            console.log(e)
+        showToast1(){
+            this.showToast('top')
+        },
+        showToast2(){
+            this.showToast('middle')
+        },
+        showToast3(){
+            this.showToast('bottom')
+        },
+        showToast(position){
+            this.$toast(`你的智商目前为 ${parseInt(Math.random() * 100)}。你的智商需要充值！`, {
+                position,
+                enableHtml: false,
+                closeButton: {
+                    text: '已充值',
+                    callback () {
+                        console.log('他说已经充值智商了')
+                    }
+                },
+                autoClose: 3,
+            })
         }
     }
 })
