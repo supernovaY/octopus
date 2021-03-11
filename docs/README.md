@@ -1,17 +1,17 @@
 ---
 home: true
-heroImage: /images/章鱼UI框架制作流程.png
-heroText: Octopus - UI
+heroImage: /oco.png
+octopusText: Octopus - UI
 tagline: 一个简易好用的UI框架
 actionText: 快速上手 →
 actionLink: /install/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+- title: 简洁好用
+  details: 涵盖了popover，button，tabs，toast，collapse，layout，grid，input组件的UI库。 
+- title: 基于Vue
+  details: 以 Vue 为基础的UI库，下载安装后开箱即用，简易易用，是个小型的UI组件库。
+- title: Octopus-UI库
+  details: Octopus为开源项目，不以盈利为目的，仅代表作者个人作品。
   
 footer: MIT Licensed | Copyright © 2018-present Evan You 作者：supernova_Y
 ---

@@ -6,7 +6,7 @@
 <script>
   import Vue from 'vue'
   export default {
-    name: 'GuluTabs',
+    name: 'OctopusTabs',
     props: {
       selected: {
         type: String,

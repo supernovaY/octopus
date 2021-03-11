@@ -1,6 +1,10 @@
 module.exports = {
+  base: '/octopus/',
   title: 'Octopus-UI',
   description: '一个简易好用的UI框架',
+  head:[
+    ['link',{ rel: 'icon', href: 'favicon.ico' }]
+  ],
   themeConfig: {
     nav: [
       {text: '首页', link: '/'},
@@ -11,6 +15,7 @@ module.exports = {
       {
         title: '入门',
         collapsable: false,
+        displayAllHeaders: true,
         children: [
           '/install/',
           '/get-started/',
@@ -28,8 +33,7 @@ module.exports = {
           '/components/toast',
           '/components/collapse',
         ]
-      },
-
+      }
     ]
   }
 }

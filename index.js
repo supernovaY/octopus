@@ -1,6 +1,8 @@
 import Button from './src/button'
-import OctopusButtonGroup from './src/button-group'
+import ButtonGroup from './src/button-group'
 import Icon from './src/icon'
+import Col from './src/col'
+import Row from './src/row'
 
 
-export {OctopusButtonGroup, Button, Icon}
+export {ButtonGroup, Button, Icon, Col, Row}

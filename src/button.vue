@@ -1,11 +1,11 @@
 <template>
   <button class="g-button" :class="{[`icon-${iconPosition}`]: true}"
           @click="$emit('click')">
-    <div class="content">
-      <slot/>
-    </div>
     <g-icon class="icon" v-if="icon && !loading" :name="icon"/>
     <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
+    <div class="g-button-content">
+      <slot/>
+    </div>
   </button>
 </template>
 <script>
@@ -47,8 +47,13 @@ export default {
   &:focus { outline: none; }
   > .g-button-content { order: 2; }
   > .icon { order: 1; margin-right: .1em; }
+
+  &.icon-right {
+    > .g-button-content { order: 1; }
+    > .icon { order: 2; margin-right: 0; margin-left: .1em;}
   }
   .loading {
     animation: spin 1s infinite linear;
   }
+}
 </style>

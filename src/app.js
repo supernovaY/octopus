@@ -3,10 +3,10 @@ import Button from './button'
 import Icon from './icon'
 import Input from './input'
 import Row from './row'
-import Col from './col'
+import OctopusCol from './col'
 import Layout from './layout'
 import Header from './header'
-import Sider from './sider'
+import OctopusSider from './sider'
 import Content from './content'
 import Footer from './footer'
 import OctopusButtonGroup from "./button-group";
@@ -26,12 +26,12 @@ Vue.component('g-icon', Icon)
 Vue.component('g-button-group', OctopusButtonGroup)
 Vue.component('g-input', Input)
 Vue.component('g-row', Row)
-Vue.component('g-col', Col)
+Vue.component('g-col', OctopusCol)
 Vue.component('g-layout', Layout)
 Vue.component('g-header', Header)
 Vue.component('g-content', Content)
 Vue.component('g-footer', Footer)
-Vue.component('g-sider', Sider)
+Vue.component('g-sider', OctopusSider)
 Vue.component('g-toast', Toast)
 Vue.use(plugin)
 Vue.component('g-tabs', Tabs)

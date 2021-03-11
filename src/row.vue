@@ -1,7 +1,7 @@
 <template>
-    <div class="row" :style="rowStyle" :class="rowClass">
+  <div class="row" :style="rowStyle" :class="rowClass">
     <slot></slot>
-    </div>
+  </div>
 </template>
 <script>
 export default {
@@ -13,7 +13,7 @@ export default {
     align: {
       type: String,
       validator (value) {
-        return ['left', 'right', 'center'].includes(value)
+        return ['left', 'right', 'center'].indexOf(value) >= 0
       }
     }
   },
@@ -32,7 +32,7 @@ export default {
       vm.gutter = this.gutter
     })
   }
-  }
+}
 </script>
 <style scoped lang="scss">
 .row{

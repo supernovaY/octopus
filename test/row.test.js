@@ -1,7 +1,7 @@
 const expect = chai.expect;
 import Vue from 'vue'
 import Row from '../src/row'
-import Col from '../src/col'
+import OctopusCol from '../src/col'
 
 Vue.config.productionTip = false
 Vue.config.devtools = false
@@ -13,7 +13,7 @@ describe('Row', () => {
   })
   it('接收 gutter 属性.', (done) => {
     Vue.component('g-row', Row)
-    Vue.component('g-col', Col)
+    Vue.component('g-col', OctopusCol)
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `

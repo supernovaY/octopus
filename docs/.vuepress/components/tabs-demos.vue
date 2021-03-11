@@ -1,40 +1,23 @@
----
-title: Tabs - 标签
-sidebarDepth: 0
----
-# Tabs - 标签
-
-## 预览
-
-<ClientOnly>
-  <tabs-demos></tabs-demos>
-</ClientOnly>
-
-## 使用方法
-```vue
 <template>
   <g-tabs :selected="selectedTab" >
     <g-tabs-head>
-      <g-tabs-item name="1" >
+      <g-tabs-item name="tab1" >
         <g-icon name="settings"></g-icon>
         标题一
       </g-tabs-item>
-      <g-tabs-item name="2">
+      <g-tabs-item name="tab2">
         标题二
       </g-tabs-item>
-      <g-tabs-item name="3" disabled>
+      <g-tabs-item name="tab3" disabled>
         标题三
       </g-tabs-item>
     </g-tabs-head>
     <g-tabs-body>
-      <g-tabs-pane name="1">
+      <g-tabs-pane name="tab1">
         内容一
       </g-tabs-pane>
-      <g-tabs-pane name="2">
+      <g-tabs-pane name="tab2">
         内容二
-      </g-tabs-pane>
-      <g-tabs-pane name="3">
-        内容三
       </g-tabs-pane>
     </g-tabs-body>
   </g-tabs>
@@ -58,17 +41,15 @@ export default {
   },
   data(){
     return {
-      selectedTab:'2'
+      selectedTab: ['tab1','tab2']
     }
   }
 };
 </script>
-
-```
-## 属性
-1. 默认高亮状态 i-tabs 需要设置 selected 属性来确定默认标签。
-
-`:selected.sync="selectedTab"`,其中 selectedTab 是你需要传递的默认值。
-并且该标签的子组件应该是 i-tabs-head 和 i-tabs-body ，否则你会得到一个警告。
-
-2. disabled 状态 disabled 属性用于 i-tabs-item 标签，可以设置该标签的不可用状态。
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+</style>

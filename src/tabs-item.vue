@@ -5,8 +5,9 @@
 </template>
 <script>
   export default {
-    name: 'GuluTabsItem',
-    inject: ['eventBus'],
+    name: 'OctopusTabsItem',
+    inject: ['eventBus'], eventBus: false,
+
     data () {
       return {
         active: false
